@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.noInternet.NoInternetActivity">
+
+    <include layout="@layout/toolbar_back" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/txt_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/_14sdp"
+        android:text="@string/no_internet_connection"
+        android:textAlignment="center"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:drawableTopCompat="@drawable/no_internet" />
+
+    <Button
+        android:id="@+id/btn_tryAgain"
+        style="@style/btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bg_6"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/try_again"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.activities.terms.view.TermsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:padding="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <EditText
+        android:id="@+id/ed_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="top"
+        tools:text="تطبيق مشوار هو أول تطبيق لنقل في المملكة السعودية
+
+التطبيق يجمع بين سائقي الشاحنات مع المستخدمين الذين يحتاجون لوسيلة نقل كنقل السيارات والاثاث وما إلى ذلك
+
+الدفع عن طريق التطبيق مع ضمان لحقوق كلا الطرفين
+
+في حال تأخر السائق عن الإجابة يمكن للمستخدم اختيار سائق اخر
+
+لطرح تساؤلاتكم واستفساركم تواصل معنا عبر الدعم الفني في التطبيق أو عبر الإيميل."
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_saveEdits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        style="@style/btn"
+        android:text="@string/save_edits"
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>

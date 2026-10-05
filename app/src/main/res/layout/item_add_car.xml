@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_carType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:fontFamily="@font/cairo_bold"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:text="@string/select_type"
+        />
+
+    <Spinner
+        android:id="@+id/sp_carType"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/corner_3"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:minWidth="@dimen/_80sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_carType" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/sp_carType"
+        app:layout_constraintEnd_toEndOf="@+id/sp_carType"
+        app:layout_constraintTop_toTopOf="@+id/sp_carType" />
+
+    <TextView
+        android:id="@+id/tv_addPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:fontFamily="@font/cairo_semibold"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sp_carType"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:text="@string/enter_price"
+        android:drawablePadding="@dimen/_8sdp"
+        app:drawableEndCompat="@drawable/ic_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_prices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_addPrice"
+        android:clipToPadding="false"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_car_price"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <TextView
+        android:id="@+id/tv_selectCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_city"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:textColor="@color/text_black"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rc_prices" />
+
+    <Spinner
+        android:id="@+id/sp_fromPlace"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/corner_3"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selectCity" />
+
+    <ImageView
+        android:id="@+id/imv_arrowDown1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/sp_fromPlace"
+        app:layout_constraintEnd_toEndOf="@+id/sp_fromPlace"
+        app:layout_constraintTop_toTopOf="@+id/sp_fromPlace" />
+
+    <Spinner
+        android:id="@+id/sp_toPlace"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/corner_3"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selectCity" />
+
+
+    <ImageView
+        android:id="@+id/imv_arrowDown2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/sp_toPlace"
+        app:layout_constraintEnd_toEndOf="@+id/sp_toPlace"
+        app:layout_constraintTop_toTopOf="@+id/sp_toPlace" />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/colorLine"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@id/sp_toPlace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

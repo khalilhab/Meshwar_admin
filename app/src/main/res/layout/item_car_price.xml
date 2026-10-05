@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imv_delete"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_trash"
+            android:layout_marginBottom="@dimen/_6sdp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:padding="@dimen/_6sdp"
+        android:background="@drawable/corner_3"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:paddingBottom="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/serviceNameTF"
+                style="@style/textInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:hint="الوصف"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/serviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:imeOptions="actionNext"
+                    android:hint="الوصف"
+                    android:textSize="@dimen/_10sdp"
+                    android:lineSpacingExtra="0dp"
+                    android:elegantTextHeight="false"
+                    android:nextFocusForward="@id/servicePrice"
+                    android:maxLines="1"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/servicePriceTF"
+                style="@style/textInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1.25"
+                android:layout_height="wrap_content"
+                android:hint="@string/price"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/servicePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/price"
+                    android:nextFocusForward="@id/serviceCommission"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10sdp"
+                    android:digits="1234567890."
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/serviceCommissionTF"
+                style="@style/textInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1.25"
+                android:layout_height="wrap_content"
+                android:hint="@string/commission"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/serviceCommission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/commission"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_10sdp"
+                    android:digits="1234567890."
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- New row for distance -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:weightSum="4"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:gravity="center_vertical"
+            android:background="@drawable/corner_3"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/sp_distance_scale"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:tint="@color/colorAccent" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/maxDistance"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:imeOptions="actionDone"
+                android:hint=""
+                android:maxLines="1"
+                android:background="@null"
+                android:textSize="@dimen/_10sdp"
+                android:digits="1234567890"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="كم"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/cairo_semibold"
+                android:textColor="@color/black" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        
+
+
+    </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>

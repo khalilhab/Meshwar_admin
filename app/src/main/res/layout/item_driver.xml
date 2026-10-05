@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_85sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="@drawable/corner_3"
+    android:elevation="1dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_driver"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:src="@drawable/user1"
+        android:layout_marginTop="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedOval" />
+
+
+    <TextView
+        android:id="@+id/tv_driverName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/user1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="normal"
+        android:fontFamily="@font/cairo_medium"
+        app:layout_constraintEnd_toStartOf="@id/tv_driverAvailable"
+        app:layout_constraintStart_toEndOf="@+id/imv_driver"
+        app:layout_constraintTop_toTopOf="@+id/imv_driver" />
+
+
+    <TextView
+        android:id="@+id/tv_driverAvailable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/available"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorAccent"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imv_driver" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:theme="@style/rating_bar"
+        app:layout_constraintStart_toStartOf="@+id/tv_driverName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driverName" />
+
+
+    <TextView
+        android:id="@+id/tv_carName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:ellipsize="end"
+        android:text="سائق دينا"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:maxLines="1"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imv_driver" />
+</androidx.constraintlayout.widget.ConstraintLayout>

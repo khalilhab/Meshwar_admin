@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_corner_8"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:elevation="@dimen/_3sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_orderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="طلب #22"
+        android:textColor="@color/colorHint2"
+        android:textStyle="normal"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_sinceTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="منذ ساعة"
+        android:textColor="@color/colorHint2"
+        android:textStyle="normal"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_user"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:translationY="-3dp"
+        tools:src="@drawable/user1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderOwner"
+        app:shapeAppearanceOverlay="@style/RoundedOval" />
+
+
+    <TextView
+        android:id="@+id/tv_orderOwner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/applicant"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderNumber" />
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:ellipsize="end"
+        tools:text="@string/user1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imv_user"
+        app:layout_constraintTop_toTopOf="@+id/imv_user" />
+
+
+
+    <TextView
+        android:id="@+id/tv_orderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        tools:text="500 ريال"
+        android:textColor="@color/text_black"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sinceTime" />
+
+
+    <TextView
+        android:id="@+id/tv_userPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:ellipsize="end"
+        tools:text="+966 523 14789"
+        android:drawablePadding="@dimen/_6sdp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:maxLines="1"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imv_user"
+        app:drawableEndCompat="@drawable/ic_phone" />
+
+
+    <TextView
+        android:id="@+id/tv_userCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:ellipsize="end"
+        android:text="@string/call"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:maxLines="1"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/tv_userPhone"
+        app:layout_constraintTop_toBottomOf="@+id/imv_user" />
+
+
+    <TextView
+        android:id="@+id/tv_orderDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:ellipsize="end"
+        tools:text="اريد نقل اثاث"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:maxLines="1"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userCall" />
+
+    <TextView
+        android:id="@+id/tv_orderPaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/paid"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderDescription" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey3"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderPaid"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_driverCarName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        tools:text="@string/driver"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_driver"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:translationY="-3dp"
+        android:src="@drawable/user1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driverCarName"
+        app:shapeAppearanceOverlay="@style/RoundedOval" />
+
+
+    <TextView
+        android:id="@+id/tv_driverName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:text="@string/user1"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imv_driver"
+        app:layout_constraintTop_toTopOf="@+id/imv_driver" />
+
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:theme="@style/rating_bar"
+        app:layout_constraintStart_toStartOf="@+id/tv_driverName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driverName" />
+
+
+    <TextView
+        android:id="@+id/tv_driverPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:ellipsize="end"
+        tools:text="+966 523 14789"
+        android:drawablePadding="@dimen/_6sdp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_black"
+        android:maxLines="1"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imv_driver"
+        app:drawableEndCompat="@drawable/ic_phone" />
+
+
+    <TextView
+        android:id="@+id/tv_driverCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:ellipsize="end"
+        android:text="@string/call"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:maxLines="1"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@id/tv_driverPhone"
+        app:layout_constraintTop_toBottomOf="@+id/imv_driver" />
+
+    <TextView
+        android:id="@+id/tv_orderDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/order_details"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_driverPhone" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

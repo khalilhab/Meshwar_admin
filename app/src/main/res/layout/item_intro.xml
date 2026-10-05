@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.intro.view.IntroActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_addImage"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:background="@drawable/bg_green_4"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imv_intro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/add"
+            android:padding="@dimen/_8sdp"
+            />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <TextView
+        android:id="@+id/tv_addImage"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/cairo_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_addImage"
+        android:paddingTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
+        android:layout_marginStart="@dimen/_26sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:text="@string/add_image"
+        />
+
+    <TextView
+        android:id="@+id/my_briefTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/write_description"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_addImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_16sdp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:hint="@string/write_description"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_briefTab">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:paddingTop="@dimen/_8sdp"
+            android:maxHeight="@dimen/_155sdp"
+            android:minLines="4"
+            android:gravity="top"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_edit"
+        style="@style/btn"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:visibility="invisible"
+        android:text="@string/edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_delete"
+        style="@style/btn"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:visibility="invisible"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add"
+        style="@style/btn"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:visibility="visible"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

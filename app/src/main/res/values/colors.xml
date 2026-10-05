@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimaryDark">#517D2E</color>
+    <color name="colorPrimary">#99C169</color>
+    <color name="colorAccent">#517D2E</color>
+    <color name="colorSecondary">#7E3E3E</color>
+    <color name="colorSecondaryVariant">#E49999</color>
+    <color name="grey">#B1B1B1</color>
+    <color name="grey2">#D4D6D7</color>
+    <color name="grey3">#93989B</color>
+    <color name="black">#FF000000</color>
+    <color name="gray_border2">#B2B2B2</color>
+    <color name="gray_trans">#99737373</color>
+    <color name="grey_bg">#E9EBEB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ic_launcher_background">#FFFFFFFF</color>
+    <color name="text_black">#263238</color>
+    <color name="colorHint">#ABABAB</color>
+    <color name="colorHint2">#7D8488</color>
+    <color name="greenHint">#97B182</color>
+    <color name="green_trans2">#F0F5EA</color>
+    <color name="green_trans3">#F7FAF3</color>
+    <color name="green_trans">#F5F9F0</color>
+    <color name="colorDark">#393939</color>
+    <color name="green2">#32BA7C</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF9800</color>
+    <color name="colorBg">#F6F6F6</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="dark_blue">#2D3748</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorLine">#D9D9D9</color>
+    <color name="border">#E0E0E0</color>
+    <color name="green_bg">#F8FAF5</color>
+    <color name="green_bg2">#E5EEDB</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/colorPrimary</color>
+
+</resources>

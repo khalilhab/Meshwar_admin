@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.driverDetails.view.DriverDetailsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tv_driverAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:text="@string/available"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_driver"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        tools:src="@drawable/user1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_driverAvailable"
+        app:shapeAppearanceOverlay="@style/RoundedOval" />
+
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:theme="@style/rating_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imv_driver" />
+
+
+    <TextView
+        android:id="@+id/my_infoTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/text_black"
+        app:layout_constraintStart_toStartOf="@id/my_infoTab"
+        app:layout_constraintEnd_toEndOf="@id/my_infoTab"
+        app:layout_constraintTop_toBottomOf="@id/my_infoTab"
+        />
+
+    <TextView
+        android:id="@+id/my_briefTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_him"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/my_infoTab"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        app:layout_constraintStart_toStartOf="@id/my_briefTab"
+        app:layout_constraintEnd_toEndOf="@id/my_briefTab"
+        app:layout_constraintTop_toBottomOf="@id/my_briefTab"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/briefTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:hint="@string/short_description"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_briefTab">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/brief"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/_8sdp"
+            android:enabled="false"
+            android:maxHeight="@dimen/_155sdp"
+            android:minLines="4"
+            android:gravity="top"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toBottomOf="@+id/my_infoTab"
+        app:layout_constraintBottom_toTopOf="@id/view3"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:hint="@string/name"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:textAlignment="viewStart" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:hint="@string/email"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:textAlignment="viewStart" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTF">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneTF"
+            style="@style/textInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="1234567890+"
+                android:textColor="@color/black"
+                android:enabled="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:maxLength="20" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:hintEnabled="true"
+        app:endIconMode="password_toggle"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:enabled="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="4444444"
+            android:inputType="textPassword"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dobTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/date_of_birth"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:clickable="true"
+            android:enabled="false"
+            android:focusable="true"
+            android:text="   "
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/ic_calender"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_dob"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:text="@string/dd_mm_yyy"
+        android:visibility="visible"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/dobTF"
+        app:layout_constraintEnd_toEndOf="@id/dobTF"
+        app:layout_constraintStart_toStartOf="@id/dobTF"
+        app:layout_constraintTop_toTopOf="@id/dobTF" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/carTypeTF"
+        style="@style/textInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/type_of_vehicle"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dob">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/carType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:clickable="true"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:focusable="true"
+            android:text="   "
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/sp_carType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:background="@android:color/white"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/colorHint"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/carTypeTF"
+        app:layout_constraintEnd_toEndOf="@id/carTypeTF"
+        app:layout_constraintStart_toStartOf="@id/carTypeTF"
+        app:layout_constraintTop_toTopOf="@id/carTypeTF" />
+
+
+
+    <TextView
+        android:id="@+id/tv_plate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_plate"
+        android:textStyle="bold"
+        android:fontFamily="@font/cairo_semibold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/carTypeTF"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_saudi_plate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layoutDirection="ltr"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_plate_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/et_plate_num1"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/et_plate_num2"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/et_plate_num3"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/et_plate_num4"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp" />
+
+        <EditText
+            android:id="@+id/et_plate_let1"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/et_plate_let2"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:id="@+id/et_plate_let3"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/bg_plate_box"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:hint="-"
+            android:textColorHint="@color/colorHint" />
+    </LinearLayout>
+
+
+        <TextView
+        android:id="@+id/tv_idCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/text_black"
+        android:text="@string/personal_id_photo"
+        android:textAlignment="center"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@id/layout_saudi_plate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_idCardFront"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_idCard"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_idCardBack"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_idCard"
+        app:layout_constraintStart_toEndOf="@id/imv_idCardFront"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_drivingLicense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/text_black"
+        android:text="@string/driving_license"
+        android:textAlignment="center"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@id/imv_idCardFront"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_drivingLicenseFront"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_drivingLicense"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_drivingLicenseBack"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_drivingLicense"
+        app:layout_constraintStart_toEndOf="@id/imv_drivingLicenseFront"
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/tv_faceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/text_black"
+        android:text="@string/face_image"
+        android:textAlignment="center"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@id/imv_drivingLicenseFront"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_driverPhoto"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_faceImage"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_52sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_accept"
+        style="@style/btn"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="@string/accept"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sendNotification"
+        style="@style/btn"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="@string/send_notification"
+        />
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

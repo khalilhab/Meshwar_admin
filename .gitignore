@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Keystore files & Signing keys (Sensitive)
+*.jks
+*.keystore
+*.pepk
+
+# Archives & Backups
+*.zip
+*.tar.gz
+*.rar
+*.7z
